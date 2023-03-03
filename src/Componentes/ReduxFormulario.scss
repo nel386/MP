@@ -6,78 +6,50 @@
   padding: 0.5em 0 0 0;
   padding-bottom: 0.5em !important;
   color: $color-meta;
-  font-family: 'Tilt Neon', cursive;
+  font-family: "Tilt Neon", cursive;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.151);
   display: flex;
   align-items: center !important;
 }
 
-.logo-redux{
+.logo-redux {
   width: 1em !important;
-  margin-right: .15em;
+  margin-right: 0.15em;
   object-fit: cover;
   border-radius: 5px;
   box-shadow: none !important;
 }
-  
-  .principal-redux {
-    margin: -3em 0 1em 0;
-    width: fit-content;
-    display: flex;
-    justify-content: start;
-    align-items: center;
 
-  }
-  
-  .principal-redux button {
-    margin-left: 1.5em !important;
-  }
+.principal-redux {
+  margin: -3em 0 1em 0;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-  #error{
-    margin: 0 auto;
-  }
+.principal-redux button {
+  margin-left: 1.5em !important;
+}
 
-  .error-redux {
-    text-align: center;
-    position: fixed;
-    bottom: 10%;
-    width: 85%;
-    padding: 10px ;
-    margin: 0 auto !important;
-    background-color: #f44336;
-    border: 1px solid #c5c5c5;
-    border-radius: 5px;
-    color: #ffffff;
-    font-size: 14px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05),
-      0 4px 8px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.05),
-      0 16px 32px rgba(0, 0, 0, 0.05), 0 32px 64px rgba(0, 0, 0, 0.05);
-  
+.error-redux {
+  top: 90% !important;
+  width: 90%;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-    animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
-  .error-redux.show {
+  100% {
     opacity: 1;
-    visibility: visible;
   }
-  
-  @-webkit-keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
   }
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  100% {
+    opacity: 1;
   }
-  
+}

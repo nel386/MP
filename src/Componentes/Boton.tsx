@@ -1,26 +1,9 @@
 import React from "react";
 import { Button } from "primereact/button";
 import "./Boton.scss";
+import { BotonProps } from "../Modelo/Interfaces/interfaces";
 
-interface BotonProps {
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  className?: string;
-  label?: string;
-  tooltip?: string;
-  id?: string;
-  type?: string;
-  disabled?: boolean;
-}
-
-const Boton: React.FC<BotonProps> = ({
-  onClick,
-  className,
-  label,
-  tooltip,
-  id,
-  type,
-  disabled,
-}) => {
+const Boton: React.FC<BotonProps> = ({ onClick }) => {
   return (
     <Button
       className="boton"

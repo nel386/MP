@@ -6,24 +6,13 @@ import {
   selectImageUrl,
   selectButtonPressed,
   setButtonPressed,
-  setInputValue,
-  selectInputValue,
 } from "../Store/slice";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { IoIosHome } from "react-icons/io";
 import "./Visor.scss";
-import { RootState } from "../Store/store";
-
-interface VisorProps {
-  url?: string;
-  width?: string;
-  height?: string;
-}
+import { VisorProps } from "../Modelo/Interfaces/interfaces";
 
 const Visor: React.FC<VisorProps> = ({ width = "200", height = "200" }) => {
-  const inputValue = useSelector((state: RootState) => state.search.inputValue);
 
-  const location = useLocation();
   const imageUrl = useSelector(selectImageUrl);
   const botonClick = useSelector(selectButtonPressed);
   const dispatch = useDispatch();
@@ -33,7 +22,6 @@ const Visor: React.FC<VisorProps> = ({ width = "200", height = "200" }) => {
       dispatch(setImagenURL(imageUrl));
       dispatch(setButtonPressed(false));
       console.log("raza", raza);
-      
     }
   }, [botonClick, dispatch, imageUrl]);
 
@@ -43,13 +31,12 @@ const Visor: React.FC<VisorProps> = ({ width = "200", height = "200" }) => {
   console.log(raza);
   console.log(imageUrl);
 
-
   return (
     <div className="container">
       <div className="icon-container">
-          <a href="/">
-            <IoIosHome className="icon"/>
-          </a>
+        <a href="/">
+          <IoIosHome className="icon" />
+        </a>
       </div>
       <ReduxFormulario />
       <div className="container-img">

@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import * as Yup from "yup";
-import axios from "axios";
 import { Navigate } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { setInputValue, setImagenURL } from "../Store/slice";
