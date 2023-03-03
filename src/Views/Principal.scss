@@ -1,0 +1,77 @@
+@import "../Utils/variables.scss";
+
+.principal {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90vw;
+  min-height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo{
+  width: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 0.5em 0 0 0;
+    padding-bottom: 0.5em !important;
+    color: $color-meta;
+    font-family: 'Tilt Neon', cursive;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.151);
+}
+
+.error {
+  position: absolute;
+  top: 10%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f44336;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05),
+    0 4px 8px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.05),
+    0 16px 32px rgba(0, 0, 0, 0.05), 0 32px 64px rgba(0, 0, 0, 0.05);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.error.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../Utils/variables.scss";
+
+.input {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  margin: 0 auto;
+  border: 1px solid $color-meta !important;
+  border-radius: 7px;
+
+  &:focus {
+    border-color: $color-meta !important;
+    box-shadow: 0 0 0 0.2rem #1b80bf48 !important;
+  }
+}
+
+.lupa {
+  color: $color-meta !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+  position: absolute !important;
+  z-index: 3 !important;
+}
+
+input{
+  text-transform: capitalize !important;
+}
+
+input::placeholder {
+  text-transform: none !important;
+}

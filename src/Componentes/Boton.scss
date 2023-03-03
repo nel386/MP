@@ -1,0 +1,16 @@
+@import "../Utils/variables.scss";
+
+.boton {
+  font-family: 'Cairo', sans-serif !important;
+  letter-spacing: .1em;
+  height: 3em;
+  background-color: $color-meta !important;
+  transition: all 0.2s ease-in-out;
+  margin: 3em auto !important;
+  &:focus {
+    border-color: $color-meta !important;
+  }
+  &:hover {
+    background-color: $color-hover !important;
+  }
+}
